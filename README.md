@@ -6,6 +6,11 @@
 
 ![image](https://user-images.githubusercontent.com/91891487/182252404-691388c7-04cc-4920-bab2-ef17e4c4af92.png)
 
+
+<h2> Instalation </h2>
+
+      git clone git@github.com:Yahia-Abdchafee-ADAM/108trigo.git 
+
 <h2> Usage </h2>
 
 ![image](https://user-images.githubusercontent.com/91891487/182252459-b243defa-512b-4149-ba03-2661fd598895.png)
