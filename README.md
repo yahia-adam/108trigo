@@ -1,4 +1,4 @@
-<h1 aling="center"> 108trigo</h1>
+<h1 align="center"> 108trigo </h1>
 
 ![image](https://user-images.githubusercontent.com/91891487/182252327-b5987ff5-6f0e-4b25-a7e8-c4b0a26d7120.png)
 
