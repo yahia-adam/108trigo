@@ -1,0 +1,54 @@
+#!/usr/bin/python3
+import sys
+from math import *
+from copy import deepcopy
+import help_trigo
+import trigonometrie_funtion
+
+argc = len(sys.argv)
+argv = sys.argv
+
+def error():
+    if argc == 1:
+        sys.exit(84)
+    if argc >= 2:
+        if argv[1] == "-h" or argv[1] == "--help":
+            help_trigo.usage()
+        elif argv[1] not in ["EXP", "COSH", "SINH", "COS", "SIN"]:
+            sys.exit (84)
+        try:
+            for count in range(2, len(argv)):
+                argv[count] = float(argv[count])
+        except ValueError:
+            sys.exit (84)
+    if (sqrt(argc - 2) % 1) != 0:
+        sys.exit(84)
+
+def trigo():
+    error()
+    numbers = argv[2:]
+    n = int(sqrt(len(numbers)))
+    mx = list()
+    for r in range(n):
+        i = r * n
+        mx.append(numbers[i:i+n])
+    if argv[1] == "EXP":
+        mx = trigonometrie_funtion.exp(mx)
+    if argv[1] == "SIN":
+        mx = trigonometrie_funtion.sin(mx)
+    if argv[1] == "COS":
+        mx = trigonometrie_funtion.cos(mx)
+    if argv[1] == "COSH":
+        mx = trigonometrie_funtion.cosh(mx)
+    if argv[1] == "SINH":
+        mx = trigonometrie_funtion.sinh(mx)
+    n = len(mx)
+    for i in range(n):
+        for j in range(n):
+            print(f"{mx[i][j]:.2f}", end="")
+            if j < n-1:
+                print("\t", end="")
+        print("")
+    sys.exit(0)
+
+trigo()
